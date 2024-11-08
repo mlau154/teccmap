@@ -1,0 +1,7 @@
+[package]
+name = "teccmap"
+version = "0.0.0"
+authors = ["Matt Lauer <mlauer2015@gmail.com>"]
+
+[profile.release]
+debug = false
