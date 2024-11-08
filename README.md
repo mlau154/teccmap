@@ -7,22 +7,24 @@ from either Linux or Windows using
 
 `.\teccmap "path/to/txt_file.txt" "path/to/output_file.map" "name displayed in tecplot" <num_points>`
 
-The first argument is either a relative or absolute path to a text file containing non-dimensional
+The **first** argument is either a relative or absolute path to a text file containing non-dimensional
 RGB values. The contents of the text file should look like
 
+```
 0.0 0.5 0.3
 0.2 0.88 0.135
 0.5 0.23 0.66
 0.8 0.3 1.0
 1.0 0.6 0.55
+```
 
-where each row is a space-delimited vector of RGB values scaled between 0.0 and 1.0. The second argument
+where each row is a space-delimited vector of RGB values scaled between 0.0 and 1.0. The **second** argument
 is a relative or absolute path to the output name of the `.map` file that will be imported into Tecplot.
 Note that the quotes are only required for the first two arguments if there are spaces in the path. The
-third argument is the name as shown in the Tecplot contour colormap dropdown menu. This argument
+**third** argument is the name as shown in the Tecplot contour colormap dropdown menu. This argument
 must be surrounded by quotes if there are spaces.
 
-The fourth argument is the number of points that
+The **fourth** argument is the number of points that
 will be extracted from the text file using a linear spacing. Tecplot requires this value to be between
 2 and 50, inclusive. Using the example RGB values shown above, a value of 3 would use the first,
 third, and fifth points.
@@ -35,7 +37,7 @@ of Tecplot and click the "import" option. Alternatively, the map can be added to
 For a simple installation, first download the executable from
 
 - Windows: `target/x86_64-pc-windows-gnu/release/teccmap.exe`
-- Linux/WSL: `release/teccmap`
+- Linux/WSL: `target/release/teccmap`
 
 Then, place the executable in any location (e.g., a "Documents" or "Programs" folder) and add this
 folder to the system path. To do this:
